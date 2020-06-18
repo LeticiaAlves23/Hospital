@@ -2,16 +2,75 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+  <body> 
+    <div class="container">
+  <div>
+    <h1 style="text-align: center; width: 15;">Hospital</h1>
+  </div>
+ 
+    <h2>Cadastro do Hospital</h2>
+    <form  method="POST">
+      <label for="nome_login" style="text-align: justify;">Nome</label>
+      <input type="text" name="nome" ><br>
+      <label for="nome_login" style="text-align: justify;">Leitos</label>
+      <input type="text" name="Leitor"><br>
+      <div>
+      <label> Tipo:</label>
+      Normal<input type="radio" name="Tipo" id="Normal" value="Hospital Normal">
+      Campanha<input type="radio" name="Tipo" id="Campanha" value="Hospital Campanha">
+    </div>
+      <input type="submit" value="Salvar" onchange="Salvar()">    
+
+    <div>
+      <h2> Paciente </h2>
+    </div>
+  <div>
+      <label> Nome:</label>
+      <input type="text" id="nome" value=""><br>
+      <label> Idade:</label>
+      <input type="text" id="Idade" value=""><br>
+      <label> Sexo:</label>
+      Masculino<input type="radio" name="sexo" id="rm" value="M">
+      Feminino<input type="radio" name="sexo" id="rf" value="F"><br>
+      <input type="submit" value="Cadastrar" onchange="adicionarPaciente()">
+
+  </div>
+</form>
+</div>
+</body>
+
+  <script>
+    function onchange(e){
+      var Nome = document.getElementById('Nome').value;
+      var Leitos = document.getElementById('Leitos').value;
+      var Tipo = document.getElementById('Tipo').value;
+      Salvar(Nome, Leitos, Tipo);
+
+      function Salvar(Nome, Leitos, Tipo) {
+       console.log("Nome: " + Nome);
+       console.log("Leitos: " + Leitos);
+       console.log("Tipo: " + Tipo);
+    }
+ };
+ function onchange(e){
+      var Nome = document.getElementById('nome').value;
+      var Idade = document.getElementById('Idade').value;
+      var Sexo = document.getElementById('sexo').value;
+      adicionarPaciente(Nome, Idade, Sexo);
+
+      function adicionarPaciente(Nome, Idade, sexo) {
+       console.log("Nome: " + Nome);
+       console.log("Idade: " + Idade);
+       console.log("Sexo: " + Sexo);
+    }
+ };
+  </script>
+
 </html>
