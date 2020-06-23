@@ -11,8 +11,7 @@ const hospitalSchema = new mongoose.Schema({
         nome: String,
         Idade: String,
         Sexo: String
-        }
-    ,
+   }
  });
 
 
