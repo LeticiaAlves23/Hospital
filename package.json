@@ -6,7 +6,10 @@
     "start": "node server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "heroku-prebuild": "echo This runs before Heroku installs dependencies.",
+    "heroku-postbuild": "echo This runs after Heroku installs dependencies, but before Heroku prunes and caches dependencies.",
+    "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies."
   },
   "dependencies": {
     "boostrap": "^2.0.0",
@@ -48,5 +51,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "cacheDirectories": ["client/node_modules", "server/node_modules"]
 }
