@@ -16,6 +16,7 @@
     "mongodb": "^3.5.9",
     "mongoose": "^5.9.20",
     "node-fetch": "^2.6.0",
+    "nodejs": "0.0.0",
     "nodemon": "^2.0.4",
     "start": "^5.1.0",
     "vue": "^2.6.11"
@@ -49,4 +50,3 @@
     "not dead"
   ]
 }
-
