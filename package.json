@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "node index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -11,8 +12,12 @@
     "boostrap": "^2.0.0",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
+    "heroku": "^7.42.1",
     "mongodb": "^3.5.9",
-    "mongoose": "^5.9.19",
+    "mongoose": "^5.9.20",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
+    "start": "^5.1.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -44,3 +49,4 @@
     "not dead"
   ]
 }
+

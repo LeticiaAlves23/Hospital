@@ -16,7 +16,7 @@
   </div>
  
     <h2>Cadastro do Hospital</h2>
-    <form  method="POST">
+    <form  action="/domain/app.js  method="POST">
       <label for="nome_login" style="text-align: justify;">Nome</label>
       <input type="text" name="nome" ><br>
       <label for="nome_login" style="text-align: justify;">Leitos</label>
@@ -71,6 +71,10 @@
        console.log("Sexo: " + Sexo);
     }
  };
+
+ fetch('https://github.com/LeticiaAlves23/Projeto-do-Hospital/')
+    .then(res => res.json())
+    .then(json => console.log(json));
   </script>
 
 </html>
